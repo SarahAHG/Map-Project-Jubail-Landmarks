@@ -1,6 +1,6 @@
-## Udacity Neighborhood Map project - Jubail Districts
-This map show a number of jubail city districts.
-You can filter through the locations, and read information about each district.
+## Udacity Neighborhood Map project - Jubail Landmarks
+This map show a number of jubail landmarks.
+You can filter through the locations, and read information about each landmark.
 
 ## How to start
 1. Download this version on your machine.
