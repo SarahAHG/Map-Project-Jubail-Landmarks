@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#map {
+    height: -webkit-fill-available;
+}
+
+.locationsList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;;
+}
+
+.location-item {
+  cursor: pointer;
+  list-style-type: none;
+  font-size: 1em;
+  text-align: left;
+  padding-left: 1em;
+  padding-top: 0.2em;
+  margin-top: 2px;
+}
+
+#searchContainer {
+    position: fixed;
+    top: 89px;
+    left:20px;
+    background-color: #EBF5FB;
+    box-shadow: 0px 0px 20px #888888;
+    border-radius: 5px;
+    padding: 10px;
+    color: gray;
+    transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+}
+
+.titleHead {
+  font-weight: bold;
+  background-color: #EBF5FB;
+}
+
+.search {
+    width: 100%;
+    font-size: .9em;
+}
+
+

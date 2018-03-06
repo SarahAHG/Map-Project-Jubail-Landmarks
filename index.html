@@ -1,0 +1,33 @@
+<!--Clicking the list must also display information about the location.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map: Jubail Landmarks</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/world-map.png">
+</head>
+<body>
+      <div id="map"></div>
+      <div id="searchContainer">
+         <input id="filter" class="form-control mr-sm-2 search" type="text" placeholder="Filter Locations" data-bind="textInput: filter, valueUpdate: 'afterkeydown'" aria-label="Search" maxlength="20"/>
+         <ul class="locationsList" data-bind="foreach: filteredList">
+            <li class="location-item" data-bind="text:$data.title, click:$parent.clickingTrigger"></li>
+         </ul>
+      </div>
+      </div>
+
+  <script src="js/main.js"></script>
+  <!--<script src="js/locations.js"></script>-->
+
+   <!-- AIzaSyCQFCY248mzPVuStvvA460CeC1eal0kIc0 -->
+  <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQFCY248mzPVuStvvA460CeC1eal0kIc0&v=3&callback=initMap" onerror="errorMsgGoogle()">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="http://knockoutjs.com/downloads/knockout-3.4.2.js"></script>
+</body>
+</html>
