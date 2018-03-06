@@ -26,7 +26,6 @@ var myLocation = function(data) {
     self.lat = ko.observable(data.location.lat);
     self.lng = ko.observable(data.location.lng);
     self.marker = ko.observable();
-    //self.content = ko.observable("");
 
 };
 
@@ -69,8 +68,8 @@ var ViewModel = function() {
         listOfLocation.marker = marker;
 
         // Get data from Wiki API
-        var URL = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' + listOfLocation.title() + '&format=json&callback=wikiCallback';
-        //var URL = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+ listOfLocation.title() + "&limit=1&format=json"
+        var URL = 'http://en.wikipedia.org/w/api.php?action=opensearch&search=' 
+        + listOfLocation.title() + '&format=json&callback=wikiCallback';
         // WikiPedia API 
         $.ajax({
             url: URL,
@@ -82,12 +81,8 @@ var ViewModel = function() {
                 // make it readable
                 listOfLocation.wikiPage = data[3][0];
                 // create the content for the infowindo, will be easier to assign on the content window argument
-                listOfLocation.content = '<div id="infoWindow" class="titleHead">' + listOfLocation.title() +
-                    '</div> <div> <a href="' + listOfLocation.wikiPage + '"> More Information about ' + listOfLocation.title() + ' </a> </div>';
-
-                /*var wikiRequestTimeout = setTimeout(function() {
-                    alert("Ops, WikiPedia failed to load your request");
-                }, 7000);*/
+                listOfLocation.content = '<div class="titleHead">' + listOfLocation.title() +
+                    '</div> <div class="WikiInfo"> <a href="' + listOfLocation.wikiPage + '"> More Information about ' + listOfLocation.title() + ' </a> </div>';
 
                 //  info window and bouncing marker functions
                 listOfLocation.marker.addListener("click", function() {

@@ -2,6 +2,9 @@
 This map show a number of jubail landmarks.
 You can filter through the locations, and read information about each landmark.
 
+## Live Demo
+Map: Jubail Landmarks (https://sarahahg.github.io/Map-Project-Jubail-Landmarks/).
+
 ## How to start
 1. Download this version on your machine.
 2. Open index.html on your browser.
